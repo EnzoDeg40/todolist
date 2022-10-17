@@ -7,9 +7,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             
             list.forEach(e => {
                 e.addEventListener('click', ()=>{
-                    console.log(list);
-                    console.log(e.className);
-                    console.log(e.classList.contains("checked"));
                     if(e.classList.contains("checked")){
                             e.classList.remove('checked');
                         }else{
