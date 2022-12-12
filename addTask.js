@@ -1,12 +1,45 @@
-function addTask(task){
-    var taskList = document.querySelector('.todo-list');
-    var taskItem = document.createElement("li");
-    taskItem.innerHTML = task;
-    taskItem.className = "todo-list-item"
-    taskList.appendChild(taskItem);
+window.addEventListener('load', () => {
+    displayTasks();
+})
 
-    // Vide le champ de saisie
+function addTask(task){
+    let tasks = getLocalStorageTasks();
+    let taskList = document.querySelector('.todo-list');
+
+    displayOneTask(taskList, task)
+
+    if (tasks === null) {
+        data = [];
+        data.push(task);
+        localStorage.setItem('todos', JSON.stringify(data))
+    } else {
+       tasks = [...tasks, task]
+       localStorage.setItem('todos', JSON.stringify(tasks))
+    }
+
     document.querySelector('.new-todo').value = "";
+}
+
+function displayTasks() {
+    let tasks = getLocalStorageTasks();
+
+    if (tasks !== null) {
+        let taskList = document.querySelector('.todo-list');
+        for(let a = 0; tasks.length > a; a++) {
+            displayOneTask(taskList, tasks[a])
+        }
+    }
+}
+
+function displayOneTask(taskList, task) {
+    let taskItem = document.createElement("li");
+            taskItem.innerHTML = task;
+            taskItem.className = "todo-list-item"
+            taskList.appendChild(taskItem);
+}
+
+function getLocalStorageTasks() {
+    return JSON.parse(localStorage.getItem('todos'))
 }
 
 
@@ -15,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     input.addEventListener('keypress', function (e) {
         if (e.keyCode === 13) {
-            console.log('Enter was pressed');
         
             let task = input.value;
 
