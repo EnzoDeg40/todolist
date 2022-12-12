@@ -6,12 +6,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             var list = document.querySelectorAll('.todo-list-item');
             
             list.forEach(e => {
-                e.addEventListener('click', () => {
-                    if(e.classList.contains("checked")){
-                            e.classList.remove('checked');
-                        }else{
-                            e.classList.add('checked');
-                    }
+                e.addEventListener('click', ()=>{
+                    e.classList.toggle('checked');
                 })
             });
         }
