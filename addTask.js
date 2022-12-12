@@ -2,13 +2,12 @@ function addTask(task){
     var taskList = document.querySelector('.todo-list');
     var taskItem = document.createElement("li");
     taskItem.innerHTML = task;
+    taskItem.className = "todo-list-item"
     taskList.appendChild(taskItem);
 
     // Vide le champ de saisie
     document.querySelector('.new-todo').value = "";
-
 }
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,3 +25,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+

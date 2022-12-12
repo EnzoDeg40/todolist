@@ -376,3 +376,7 @@ html .clear-completed:active {
 		bottom: 10px;
 	}
 }
+
+.todo-list-item{
+	padding: 10px;
+}
