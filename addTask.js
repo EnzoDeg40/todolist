@@ -31,7 +31,7 @@ function updateCheckEventListener() {
 
 window.addEventListener('load', () => {
     displayTasks();
-    updateCheckEventListener();
+    updateAddListener();
 })
 
 function addTask(taskName){
