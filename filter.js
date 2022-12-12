@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
             if(e.classList.contains('checked')){
                 e.style.display = "none";
             }
+            else{
+                e.style.display = "block";
+            }
         })
     })
     completedButton.addEventListener('click', ()=>{
@@ -20,8 +23,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         allButton.classList.remove('selected');
         let list = document.querySelectorAll('.todo-list-item');
         list.forEach(e => {
+            e.style.display = "block";
             if(!e.classList.contains('checked')){
                 e.style.display = "none";
+            }
+            else{
+                e.style.display = "block";
             }
         })
     })
