@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
 
 function addTask(task){
     let tasks = getLocalStorageTasks();
-
     let taskList = document.querySelector('.todo-list');
 
     displayOneTask(taskList, task)
@@ -30,7 +29,6 @@ function displayTasks() {
             displayOneTask(taskList, tasks[a])
         }
     }
-
 }
 
 function displayOneTask(taskList, task) {
