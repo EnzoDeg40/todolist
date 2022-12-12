@@ -2,7 +2,11 @@ window.addEventListener('load', () => {
     displayTasks();
 })
 
-function addTask(task){
+function addTask(taskName){
+    let task = {
+        name: taskName,
+        active: true
+    }
     let tasks = getLocalStorageTasks();
     let taskList = document.querySelector('.todo-list');
 
@@ -33,9 +37,12 @@ function displayTasks() {
 
 function displayOneTask(taskList, task) {
     let taskItem = document.createElement("li");
-            taskItem.innerHTML = task;
-            taskItem.className = "todo-list-item"
-            taskList.appendChild(taskItem);
+    taskItem.innerHTML = task.name;
+    taskItem.className = "todo-list-item"
+    if (!task.active) {
+        taskItem.className += " checked"
+    }
+    taskList.appendChild(taskItem);
 }
 
 function getLocalStorageTasks() {
