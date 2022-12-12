@@ -12,28 +12,25 @@
 	<section class="todoapp">
 		<header class="header">
 			<h1>todos</h1>
-			<input class="new-todo" placeholder="What needs to be done?" autofocus>
+			<input type="text" class="new-todo" placeholder="What needs to be done?">
 		</header>
-		<section class="main">
-			<input class="toggle-all" type="checkbox">
-			<label for="toggle-all">Mark all as complete</label>
-			<ul class="todo-list"></ul>
-		</section>
 		<footer class="footer">
 			<span class="todo-count"></span>
 			<ul class="filters">
 				<li>
-					<a href="#/" class="selected">All</a>
+					<a href="/" class="selected">All</a>
 				</li>
 				<li>
-					<a href="#/active">Active</a>
+					<a href="/active">Active</a>
 				</li>
 				<li>
-					<a href="#/completed">Completed</a>
+					<a href="/completed">Completed</a>
 				</li>
 			</ul>
 			<button class="clear-completed">Clear completed</button>
 		</footer>
+	</section>
+	<section class="todos">
 	</section>
 	<footer class="info">
 		<p>Double-click to edit a todo</p>
@@ -42,5 +39,7 @@
 	</footer>
 
 </body>
+
+<script src="js/script.js"></script>
 
 </html>
