@@ -7,6 +7,20 @@ function updateAddListener(){
         e.addEventListener('click', () => {
             e.classList.toggle('checked');
         });
+
+        e.addEventListener('dblclick', () => {
+            e.innerHTML = `<input class="tempInput" type="text" value="${e.innerHTML}">`;
+            let edit = document.querySelector('.tempInput');
+            let tasks = getLocalStorageTasks();
+            let index = tasks.findIndex(task => task === edit.value);
+            e.addEventListener('keypress', function(el) {
+                if(el.keyCode === 13){
+                    tasks[index] = edit.value;
+                    localStorage.setItem('todos', JSON.stringify(tasks));
+                    location.reload();
+                }
+            });
+        });
     });
 }
 
