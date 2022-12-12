@@ -1,23 +1,24 @@
 <!doctype html>
-<html lang="en" data-framework="javascript">
+<html lang="fr" data-framework="javascript">
 
 <head>
 	<meta charset="utf-8">
-	<title>To-do list app</title>
+	<title>To-do application</title>
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/checked.css">
+	<link rel="stylesheet" href="css/dark.css">
 </head>
 
 <body>
 	<section class="todoapp">
 		<header class="header">
 			<h1>todos</h1>
-			<input class="new-todo" placeholder="What needs to be done?" autofocus>
+			<input class="new-todo" placeholder="Ecrivez une tache à accomplir" autofocus>
 		</header>
 		<section class="main">
 			<input class="toggle-all" type="checkbox">
-			<label for="toggle-all">Mark all as complete</label>
+			<label for="toggle-all">Marquer tous comme terminé</label>
 			<ul class="todo-list">	
 			</ul>
 		</section>
@@ -25,22 +26,23 @@
 			<span class="todo-count"></span>
 			<ul class="filters">
 				<li>
-					<a href="#/" class="allButton selected">All</a>
+					<a href="#/" class="allButton selected">Tours</a>
 				</li>
 				<li>
-					<a href="#/active" class="activeButton">Active</a>
+					<a href="#/active" class="activeButton">En cours</a>
 				</li>
 				<li>
-					<a href="#/completed" class="completedButton">Completed</a>
+					<a href="#/completed" class="completedButton">Terminées</a>
 				</li>
 			</ul>
-			<button class="clear-completed">Clear completed</button>
+			<button class="clear-completed">Effacer les terminées</button>
 		</footer>
 	</section>
 	<footer class="info">
-		<p>Double-click to edit a todo</p>
-		<p>Created by Oscar Godson</p>
-		<p>Refactored by Christoph Burgmer</p>
+		<p>Double-clique pour éditer une tache</p>
+		<p>Créé by Oscar Godson</p>
+		<p>Refactorisé par Christoph Burgmer</p>
+		<p>Amélioré par les B3 Dev Web MDS Melun</p>
 	</footer>
 <script src="addTask.js"></script>
 <script src="checked.js"></script>
