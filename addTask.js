@@ -19,6 +19,7 @@ function addTask(task){
     }
 
     document.querySelector('.new-todo').value = "";
+    location.reload();
 }
 
 function displayTasks() {
