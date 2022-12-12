@@ -5,12 +5,7 @@ function updateAddListener(){
         e.removeEventListener('click', ()=>{});
 
         e.addEventListener('click', () => {
-            if(e.classList.contains("checked")){
-                e.classList.remove('checked');
-            }
-            else{
-                e.classList.add('checked');
-            }
+            e.classList.toggle('checked');
         });
     });
 }
