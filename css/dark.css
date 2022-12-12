@@ -1,0 +1,10 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(28, 28, 28);
+    }
+
+    .todoapp h1 {
+        color: rgb(183, 56, 56);
+    }
+
+}
