@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
     displayTasks();
+    updateAddListener();
 })
 
 function addTask(task){
