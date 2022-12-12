@@ -1,3 +1,18 @@
+@font-face {
+	font-family: 'Anton';
+	font-style: regular;
+	font-weight: 400;
+	src: url('../font/Anton-Regular.ttf') format('ttf')
+  }
+
+* {
+	font-family: 'Anton';
+}
+
+h1:first-letter {
+	text-transform: uppercase;
+}
+
 html,
 body {
 	margin: 0;

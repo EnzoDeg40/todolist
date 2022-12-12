@@ -54,8 +54,7 @@ function addTask(taskName){
     }
 
     document.querySelector('.new-todo').value = "";
-
-    updateCheckEventListener()
+    location.reload();
 }
 
 function displayTasks() {
