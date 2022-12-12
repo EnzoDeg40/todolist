@@ -1,5 +1,37 @@
+function updateCheckEventListener() {
+    console.log("test1");
+    let list = document.querySelectorAll('.todo-list-item');
+    console.log(list)
+    list.forEach(e => {
+        // // Remove event listener to prevent multiple event listeners
+        // e.removeEventListener('click', ()=>{});
+        e.addEventListener('click', () => {
+            console.log("test2");
+
+            if (e.classList.contains("checked")){
+                    e.classList.remove('checked');
+                    let todos = JSON.parse(localStorage.getItem('todos'));
+                    const index = Array.from(
+                        e.parentElement.children
+                      ).indexOf(e);
+                    todos[index].active = true;
+                    localStorage.setItem('todos', JSON.stringify(todos))
+                } else {
+                    e.classList.add('checked');
+                    let todos = JSON.parse(localStorage.getItem('todos'));
+                    const index = Array.from(
+                        e.parentElement.children
+                      ).indexOf(e);
+                    todos[index].active = false;
+                    localStorage.setItem('todos', JSON.stringify(todos))
+            }
+        })
+    });
+}
+
 window.addEventListener('load', () => {
     displayTasks();
+    updateCheckEventListener();
 })
 
 function addTask(taskName){
@@ -22,6 +54,8 @@ function addTask(taskName){
     }
 
     document.querySelector('.new-todo').value = "";
+
+    updateCheckEventListener()
 }
 
 function displayTasks() {
